@@ -7,7 +7,7 @@
   </head>
   <body>
     <header class="main-header">
-    	<nav class="main-navigation">
+    	<nav>
     		<a class="main-navigation-logo" href="index.html"> 
     		    <img src="../img/logo.png" alt="City of Sedona">
     		</a>
@@ -20,70 +20,76 @@
     	</nav>
     </header>
     <main class="container">
-        <section class="hotel-filter">
-            <h2 class="visually-hidden"> Фильтр поиска гостинницы </h2>
-        </section>
-        <section class="hotels-serch-results">
+        <div class="hotel-filter">
+           <!--тут булет форма-->
+        </div>   
+        <div class="hotel-sorting">
             <h2> Найдено:3 </h2>
-            <p> Сотрировка: </p>
-            <ul class="hotels-sort-criteria">
+            <span> Сотрировка: </span>
+            <ul class="hotel-sort-criteria">
                 <li> <a class="current" href="#">По цене </a></li>
                 <li> <a href="#"> По типу </a> </li>
                 <li> <a href="#"> По рейтингу </a> </li> 
             </ul>
             <div class="up-down-sort">
-            </div>    
-            <ul class="hotel-list">
-                <li>
-                    <div class="hotel-info">
-                        <img src="img/amara.png" width="200" height="100" alt="Amara Resort & Spa">  
-                        <h3> Amara Resort & Spa </h3> 
-                        <p class="hotel-type"> Гостинница </p>
-                        <p class="hotel-price"> от 4000р. </p>
-                        <a class="button hotel-description" href="#">Подробнее </a>
-                        <a class="button hotel-booking" href="#"> Забронировать </a>
-                    </div>
-                    <div class="hotel-rank">
-                        <p> Рейтинг:8.5 </p>
-                    </div>
-                </li>
-                <li>
-                    <div class="hotel-info">
-                        <img src="img/desert.png" width="200" height="100" alt="Desert Quail Inn">    
-                        <h3> Desert Quail Inn </h3> 
-                        <p class="hotel-type"> Мотель </p>
-                        <p class="hotel-price"> от 3000р. </p>
-                        <a class="button hotel-description" href="#">Подробнее </a>
-                        <a class="button hotel-booking" href="#"> Забронировать </a>
-                    </div>
-                    <div class="hotel-rank">
-                        <p> Рейтинг:8.9 </p>
-                    </div>
-                </li>
-                <li>
-                    <div class="hotel-info">
-                        <img src="img/amara.png" width="200" height="100" alt="Villas at Poco Diablo">
-                        <h3> Villas at Poco Diablo </h3> 
-                        <p class="hotel-type"> Апартаменты </p>
-                        <p class="hotel-price"> от 2000р. </p>
-                        <a class="button hotel-description" href="#">Подробнее </a>
-                        <a class="button hotel-booking" href="#"> Забронировать </a>
-                    </div>
-                    <div class="hotel-rank">
-                        <p> Рейтинг:9.2 </p>
-                    </div>
-                </li>
-            </ul>
-        </section>
+            </div> 
+        </div>
+        <div class="hotel-list">       
+            <section class="hotel-card">
+                <img src="img/amara.png" width="200" height="100" alt="Amara Resort & Spa">  
+                <div class="hotel-description">
+                    <h2> Amara Resort & Spa </h2> 
+                        <span class="hotel-type"> Гостинница </span>
+                        <span class="hotel-price"> от 4000р. </span>
+                        <a class="hotel-description" href="#">Подробнее </a>
+                        <a class="hotel-booking" href="#"> Забронировать </a>
+                </div>
+                <div class="hotel-rank">
+                    <i></i><i></i><i></i><i></i>
+                    <span> Рейтинг:8.5 </span>
+                </div>
+            </section>
+
+            <section class="hotel-card">
+                <img src="img/desert.png" width="200" height="100" alt="Desert Qual Inn">  
+                <div class="hotel-description">
+                    <h2> Desert Qual Inn </h2> 
+                        <span class="hotel-type"> Мотель </span>
+                        <span class="hotel-price"> от 3000р. </span>
+                        <a class="hotel-description" href="#">Подробнее </a>
+                        <a class="hotel-booking" href="#"> Забронировать </a>
+                </div>
+                <div class="hotel-rank">
+                    <i></i><i></i><i></i>
+                    <span> Рейтинг:8.9</span>
+                </div>
+            </section>
+
+              <section class="hotel-card">
+                <img src="img/diablo.png" width="200" height="100" alt="Villas at Poco Diablo">  
+                <div class="hotel-description">
+                    <h2> Villas at Poco Diablo </h2> 
+                        <span class="hotel-type"> Гостинница </span>
+                        <span class="hotel-price"> от 2000р. </span>
+                        <a class="hotel-description" href="#">Подробнее </a>
+                        <a class="hotel-booking" href="#"> Забронировать </a>
+                </div>
+                <div class="hotel-rank">
+                    <i></i><i></i>
+                    <span> Рейтинг:9.2 </span>
+                </div>
+            </section>
+        </div>
+                
     </main>
     <footer class="main-footer">
-        <p class="hashtag"> #VisitSedona </p>
+        <a class="social-instagram" href="#"> #VisitSedona </a>
         <ul class="footer-social">
             <li> <a class="social-twitter" href="#">Twitter</a></li>
             <li> <a class="social-facebook" href="#">Facebook</a></li>
             <li> <a class="social-youtube" href="#">YouTube</a></li>
         </ul>
-        <p class="copyright"> Web-site by <a class="button" href="https://htmlacademy.ru/intensive/htmlcss"> HTML Academy </a> </p>
+        <p class="copyright"> Web-site by <a class="htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss"> HTML Academy </a> </p>
     </footer>
   </body>
 </html>
