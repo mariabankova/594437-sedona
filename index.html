@@ -27,7 +27,7 @@
     		    <h3> Настоящий городок </h3>
     			<span> - №1 - </span>
     			<p>Седона - не аттракцион для туристов, там течет своя жизнь </p>
-    			<img src="img/realcity.png" alt="Самое красивое место на свете">
+    			<img src="img/real-city.jpg" alt="Самое красивое место на свете">
     		</section>
     		<section class="places-and-features accomodation">	 
     			<h3>Жилье</h3>
@@ -42,7 +42,7 @@
     			<p>Не только китайского, но и местного производства</p>
     		</section>
     		<section class="features-realcity-bridge">  
-    		    <img src="img/bridge.png" alt="Самый красивый мост на свете">  	
+    		    <img src="img/bridge.jpg" alt="Самый красивый мост на свете">  	
     	    	<h3> Там есть мост дьявола </h3>
     		    <span> - №2 - </span>>
     		    <p>Да, по нему можно пройти! Если, конечно, вы осмелитесь </p>
@@ -71,20 +71,36 @@
         </section>       
         <section class="map">
         	<h2 class="visually-hidden">Карта местности </h2>
-            <img src="img/map.png" alt="Sedona map" width="500" height="300">
+            <img src="img/map.jpg" alt="Sedona map" width="500" height="300">
         </section>
     </main>    
         <footer class="main-footer">
-            <a class="social-instagram" href="#"> #VisitSedona </a>
+            <a class="social-instagram" href="#" aria-label="Instagram"> #VisitSedona </a>
             <ul class="footer-social">
-            	<li> <a class="social-twitter" href="#">Twitter</a></li>
-            	<li> <a class="social-facebook" href="#">Facebook</a></li>
-            	<li> <a class="social-youtube" href="#">YouTube</a></li>
+            	<li> <a class="social-twitter" href="#" aria-label="Twitter">Twitter</a></li>
+            	<li> <a class="social-facebook" href="#" aria-label="Facebook">Facebook</a></li>
+            	<li> <a class="social-youtube" href="#" aria-label="YouTube">YouTube</a></li>
             </ul>
-            <div class="copyright"> Web-site by <a class="htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss"> HTML Academy </a> </div>
+            <div class="copyright"> Web-site by <a class="htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="HTML Academy"> HTML Academy </a> </div>
         </footer>
         <section class="modal hotel-search">
-            <!-- форма -->
+            <fieldset>
+            	<form action="/echo" metod="post">
+            		<label for="check-in-date">Дата заезда</label>
+            		<input type="date" id="check-in-date" name="check-in-date" required>
+
+            		<label for="check-out-date">Дата выезда</label>
+            		<input type="date" id="check-out-date" name="check-out-date" required>
+
+            		<label for="adults">Взрослые </label>
+            		<input type="number" id="adults" name="adults" min="1" max="99" step="1">
+
+            		<label for="kids">Дети</label>
+            		<input type="number" id="kids" name="kids" min="0" max="99" step="1">
+
+            		<input type="submit" value="Найти">
+            	</form>	
+            </fieldset>	
         </section>    
     </body>
 
