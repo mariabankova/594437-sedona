@@ -71,33 +71,45 @@ li {
 	color: #ffffff;
 }
 
-.places-and-features {	
-	background-repeat: no-repeat;
-}
 
 .accomodation,
 .food,
 .souvenirs {
 	position: relative;
+	padding-top: 50px;
 }
 
 .accomodation::before {
 	content: "";
 	background-image: url("../img/icon-1.svg");
+	background-repeat: no-repeat;
 	position: absolute;
-	top: 5px;
-	left: 5px;
-	background-size: 100px 100px;
+	width: 100px;
+	height: 100px;
+	top: 0px;
+	left: 0px;
 }
 
-.food {
-	/*тут должен был быть псевдоэлемент, но что-то пошло не так */
+.food::before {
+	content: "";
 	background-image: url("../img/icon-2.svg");
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	top: 0px;
+	left: 0px;
 }
 
-.souvenirs {
-	/*тут должен был быть псевдоэлемент, но что-то пошло не так */
+.souvenirs::before {
+	content: "";
 	background-image: url("../img/icon-3.svg");
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	top: 0px;
+	left: 0px;
 }
 
 .modal-form-request h2 {
@@ -157,6 +169,8 @@ li {
 	position: absolute;
 	background-image: url("../img/calendar.svg");
 	background-size: 10px 10px;
+	width: 10px;
+	height: 10px;
 	right:0;
 	top:0;
 }
@@ -200,14 +214,181 @@ li {
 	color: #000000;
 	font-weight: bold;
 	font-size: 21px;
+	background-color: #ffffff;
 }
 
-div.hotel-filter {
+.filter-settings {
 	background-image: url("../img/filter-background_v2.jpg");
 	background-size: 1200px 217px;
 	background-repeat: no-repeat;
+	background-color: #5b6872;
 	width: 1200px;
 	height: 217px;
+	margin:0;
+	padding:0;
+}
+
+.hotel-filter fieldset {
+	width: 1200px;
+	height: 217px;
+	margin:0;
+	padding:0;
+	color: #ffffff;
+	font-family: inherit;
+}
+
+.hotel-filter label {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.hotel-filter input[type="submit"] {
+	background-color: transparent;
+	border: 1px solid #ffffff;
+	color: #ffffff;
+	font-size: 16x;
+	width: 133px;
+	height: 32px;
+	font-family: inherit;
+	text-transform: uppercase;
+}
+
+.hotel-filter input[type="submit"]:hover {
+	background-color: #ffffff;
+	color: #000000;
+}
+
+.hotel-filter {
+	background-color: #ffffff;
+}
+
+.filter-results h2,
+.filter-results output {
+	font-size: 21px;
+	font-weight: bold;
+}
+
+.filter-results p {
+	font-size: 13px;
+}
+
+.filter-results a {
+	color: #c7c7c7;
+	text-decoration: underline dashed;
+}
+
+.filter-results a:hover {
+	color: #9ac2db;
+}
+
+.filter-results a:active {
+	color: #000000;
+	text-decoration: none;
+}
 
 
+.filter-results .current {
+	color: #9ac2db;
+	text-decoration: none;
+
+}
+
+.sort-order-up {
+	background-image: url(../img/icon-up-dir.svg);
+	background-repeat: no-repeat;
+	background-size: 10px 10px;
+	width: 10px;
+	height: 10px;	
+}
+
+.sort-order-down {
+	background-image: url(../img/icon-down-dir.svg);
+	background-repeat: no-repeat;
+	background-size: 10px 10px;
+	width: 10px;
+	height: 10px;	
+}
+
+.sort-order-up:hover {
+	background-image: url(../img/icon-up-dir-hover.svg);
+}
+
+.sort-order-down:hover {
+	background-image: url(../img/icon-down-dir-hover.svg);
+}
+
+.sort-order-up:active,
+.sort-order-up .current {
+	background-image: url(../img/icon-up-dir-active.svg);
+}
+
+/*почему тут не срабатывает класс current???? */
+.sort-order-down:active,
+.sort-order-down .current {
+	background-image: url(../img/icon-down-dir-active.svg);
+}
+
+a.hotel-description {
+	width:110px;
+	height: 27px;
+	color: #ffffff;
+	font-weight: bold;
+	display: block;
+	background-color: #81b3d2;
+	text-align: center;
+}
+
+a.hotel-description:hover {
+	background-color: #669ec0;
+}
+
+a.hotel-description:active {
+	background-color: #5496bd;
+	color: #88b6d1;
+}
+
+a.hotel-booking {
+	width:142px;
+	height: 27px;
+	color: #ffffff;
+	font-weight: bold;
+	display: block;
+	background-color: #766357;
+	text-align: center;
+}
+
+a.hotel-booking:hover {
+	background-color: #604e43;
+}
+
+a.hotel-booking:active {
+	background-color: #503e33;
+	color: #857871;
+}
+
+.hotel-rank span {
+	display: block;
+	width: 110px;
+	height: 27px;
+	background-color: #f2f2f2;
+	color: #c3c3c3;
+}
+
+.hotel-rank div {
+	background-image: url("../img/star.svg");
+	height: 17px;
+}
+
+.hotel-rank .four {
+	width: 72px;
+}
+
+
+.hotel-rank .tree {
+	width: 54px;
+}
+
+
+.hotel-rank .two {
+	width: 36px;
 }

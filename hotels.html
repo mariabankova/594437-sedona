@@ -22,28 +22,44 @@
     </header>
     <main class="container">
         <div class="hotel-filter">
-            <fieldset>
-                <form action="/echo" method="post">    
-                    <label for="infrastructure">Интфраструктура:</label>
-                    <select name="infrastructure" id="infrastructure" multiple>
-                        <option selected>Бассейн</option>
-                        <option>Парковка</option>
-                        <option>Wi-Fi</option>
-                    </select>  
-                    <label for="accomodation-type">Тип жилья:</label>
-                    <select name="accomodation-type" id="accomodation-type" multiple>
-                        <option selected>Гостиница</option>
-                        <option selected>Мотель</option>
-                        <option selected>Апартаменты</option>
-                    </select>
-                    <label for="accomodation-price">Стоимость в сутки (р):
-                        <span class="price-range">от 0</span> <span class="price-range">до 3000</span> 
-                    </label>
-                    <input type="range" name="accomodation-price" id="accomodation-price" min="0" max="3000" step="100" value="2000">
-                    <input type="submit" value="Показать">
-                </form>                
-            </fieldset> 
+            <div class="filter-settings">
+                <fieldset>
+                    <form action="/echo" method="post">    
+                        <label for="infrastructure">Информацияфраструктура:</label>
+                        <select name="infrastructure" id="infrastructure" multiple>
+                            <option selected>Бассейн</option>
+                            <option>Парковка</option>
+                            <option>Wi-Fi</option>
+                        </select>  
+                        <label for="accomodation-type">Тип жилья:</label>
+                        <select name="accomodation-type" id="accomodation-type" multiple>
+                            <option selected>Гостиница</option>
+                            <option selected>Мотель</option>
+                            <option selected>Апартаменты</option>
+                        </select>
+                        <label for="accomodation-price">Стоимость в сутки (р):
+                            <span class="price-range">от 0</span> <span class="price-range">до 3000</span> 
+                        </label>
+                        <input type="range" name="accomodation-price" id="accomodation-price" min="0" max="3000" step="100" value="2000">
+                        <input type="submit" value="Показать">
+                    </form>                
+                </fieldset> 
+            </div>
 
+            <div class="filter-results">
+                <h2> Найдено:</h2>
+                <output name="number-hotels-found">3</output>
+                <span>Сортировка:</span>
+                <ul class="hotels-sort">
+                    <li> <a href="#" class="current">По цене</a> </li>
+                    <li> <a href="#">По типу</a> </li>
+                    <li> <a href="#">По рейтингу</a> </li>
+                </ul>
+                <div class="sort-order-up">
+                </div>
+                <div class="sort-order-down current">
+                </div>
+            </div>
             <section class="hotel-card">
                 <img src="img/amara-hotel.jpg" width="200" height="100" alt="Amara Resort & Spa">  
                 <div class="hotel-description">
@@ -54,7 +70,7 @@
                         <a class="hotel-booking" href="#"> Забронировать </a>
                 </div>
                 <div class="hotel-rank">
-                    <i></i><i></i><i></i><i></i>
+                    <div class="four"> </div>
                     <span> Рейтинг:8.9</span>
                 </div>
             </section>
@@ -69,7 +85,7 @@
                         <a class="hotel-booking" href="#"> Забронировать </a>
                 </div>
                 <div class="hotel-rank">
-                    <i></i><i></i><i></i>
+                    <div class="tree"> </div>
                     <span> Рейтинг:8.9</span>
                 </div>
             </section>
@@ -84,22 +100,21 @@
                         <a class="hotel-booking" href="#"> Забронировать </a>
                 </div>
                 <div class="hotel-rank">
-                    <i></i><i></i>
+                    <div class="two"> </div>
                     <span> Рейтинг:9.2 </span>
                 </div>
             </section>
         </div>
-                
     </main>
-     <footer class="main-footer">
-            <a class="social-instagram" href="#" aria-label="Instagram"> #VisitSedona </a>
-            <ul class="footer-social">
-                <li> <a class="social-twitter" href="#" aria-label="Twitter">Twitter</a></li>
-                <li> <a class="social-facebook" href="#" aria-label="Facebook">Facebook</a></li>
-                <li> <a class="social-youtube" href="#" aria-label="YouTube">YouTube</a></li>
-            </ul>
-            <div class="copyright"> Web-site by <a class="htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="HTML Academy"> HTML Academy </a> </div>
-        </footer>
+    <footer class="main-footer">
+        <a class="social-instagram" href="#" aria-label="Instagram"> #VisitSedona </a>
+        <ul class="footer-social">
+            <li> <a class="social-twitter" href="#" aria-label="Twitter">Twitter</a></li>
+            <li> <a class="social-facebook" href="#" aria-label="Facebook">Facebook</a></li>
+            <li> <a class="social-youtube" href="#" aria-label="YouTube">YouTube</a></li>
+        </ul>
+        <div class="copyright"> Web-site by <a class="htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="HTML Academy"> HTML Academy </a> </div>
+    </footer>  
   </body>
 </html>
 
