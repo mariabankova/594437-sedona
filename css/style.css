@@ -1,8 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-
-  font-family: "PT Sans Narrow", Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 14px;
   line-height: 24px;
   color: #000000;
@@ -17,17 +16,89 @@ li {
 	list-style: none;
 }
 
-.visually-hidden {
-	display: none;
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-.main-header {
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+	width: 1200px;
+	margin: auto;
+	padding: 0;
 	background-color: #ffffff;
 }
 
-.main-header a {
+
+nav > ul {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center; /* почему не работает выраснивание????*/
+}
+nav {
+ 	margin: 0;
+ 	padding: 0;
+ 	position: relative;
+ }
+
+
+nav li:nth-child(1),
+nav li:nth-child(2) {
+ 	text-align: left;
+ }
+
+nav li:nth-child(2) {
+	margin-right: 120px;
+}
+
+nav li:nth-child(3),
+nav li:nth-child(4) {
+	text-align: right;
+	padding-left: 18px;
+
+}
+nav li:nth-child(3) {
+	margin-left: 120px;
+}
+
+ .main-navigation-logo {
+ 	position: absolute;
+ 	left: 50%;
+ 	transform: translatex(-50%);
+ }
+
+.main-header {
+	height: 55px;
+	margin: 0;
+	padding: 0;
+}
+
+.main-header a:not(.main-navigation-logo) {
 	color: #000000;
 	font-weight: bold;
+	display: block;
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 
 .main-header a:hover {
@@ -42,41 +113,107 @@ li {
 	color: #766357;
 }
 
+
 .banner {
 	background-image: url("../img/shape-for-background.png"), url("../img/index-background.jpg");
-	background-position: top 507px center, top center;
+	background-position: top 451px center, left -55px;
 	background-repeat: no-repeat, no-repeat;
+	background-size: auto, 1200px 778px;
 	width: 100%;
-	height: 800px;
+	height: 725px;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.banner-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end; /*почему тут не срабатывает флекс-энд????? */
+	align-items: center;
 }
 
 .banner h1 {
 	font-size: 21px;
 	line-height: 26px;
 	font-weight: bold;
+	width: 500px;
+	text-align: center;
 }
 
 .banner h2 {
 	font-size: 14px;
-	line-height: 26px;
+	margin-top: auto;
 }
+
 
 .main-features h3 {
 	font-size: 21px;
 	font-weight: bold;
 }
 
+.features-realcity-bridge h3 {
+	margin-top: 47px;
+	width: 160px;
+
+}
+
 .features-realcity-bridge {
 	background-color: #81b3d2;
 	color: #ffffff;
+	display: flex;
+	justify-content: space-between;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+.features-realcity-bridge img {
+	margin: 0;
+	padding: 0;
+	border: 0;
 }
 
+.features-realcity-bridge .text {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 400px;
+}
+
+.places-and-features {
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+}
+
+.places-and-features section {
+	width: 305px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;		
+}
+
+.places-and-features.grey {
+	background-color: #eeeeee;
+	min-height: 203px;
+	padding-top: 25px;
+	min-height: 232px;
+
+} 
 
 .accomodation,
 .food,
 .souvenirs {
 	position: relative;
 	padding-top: 50px;
+	background-color: #ffffff;
+	min-height: 280px;
+}
+
+.accomodation h3,
+.food h3,
+.souvenirs h3 {
+	margin-top: 110px;
+	margin-bottom: 5px;
 }
 
 .accomodation::before {
@@ -86,39 +223,53 @@ li {
 	position: absolute;
 	width: 100px;
 	height: 100px;
-	top: 0px;
-	left: 0px;
+	top: 60px;
+	left: 112px;
 }
 
 .food::before {
-	content: "";
-	background-image: url("../img/icon-2.svg");
-	background-repeat: no-repeat;
-	position: absolute;
-	width: 100px;
-	height: 100px;
-	top: 0px;
-	left: 0px;
-}
-
-.souvenirs::before {
 	content: "";
 	background-image: url("../img/icon-3.svg");
 	background-repeat: no-repeat;
 	position: absolute;
 	width: 100px;
 	height: 100px;
-	top: 0px;
-	left: 0px;
+	top: 60px;
+	left: 112px;
+}
+
+.souvenirs::before {
+	content: "";
+	background-image: url("../img/icon-2.svg");
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	top: 60px;
+	left: 112px;
+}
+
+.map {
+	height: 472px;
+	overflow: hidden;
+}
+
+.modal-form-request {
+    text-align: center;
+    padding-top: 52px;
 }
 
 .modal-form-request h2 {
 	font-size: 30px;
 	line-height: 36px;
+	margin: 0;
+
 }
 
 .modal-form-request p {
 	line-height: 24px;
+	margin-top: 20px;
+	margin-bottom: 52px;
 }
 
 .modal-form-open {
@@ -126,7 +277,7 @@ li {
 	width: 568px;
 	height: 86px;
 	border: none;
-	font-family: "PT Sans Narrow", Arial, sans-serif;
+	font-family: "PT Sans", Arial, sans-serif;
 	color: #ffffff;
 	font-weight: bold;
 	font-size: 21px;
@@ -155,6 +306,12 @@ li {
 	text-transform: uppercase;
 }
 
+.modal input[type="date"] {
+	box-sizing: border-box;
+	width: 346px;
+	height: 38px;
+}
+
 .modal input[type="date"]:hover {
 	background-color: #ebebeb;
 }
@@ -164,7 +321,7 @@ li {
 	border: 2px solid #e5e5e5;
 }
 
-/*фигня какая-то*/
+/*фигня какая-то хотела добавить календарик справа*/
 .modal input[type="date"]::after {
 	position: absolute;
 	background-image: url("../img/calendar.svg");
@@ -214,11 +371,50 @@ li {
 	color: #000000;
 	font-weight: bold;
 	font-size: 21px;
-	background-color: #ffffff;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 }
 
+.social-instagram {
+	padding-top: 47px;
+	padding-bottom: 47px;
+	padding-left: 130px;
+	width: 400px;
+	box-sizing: border-box;
+}
+
+.footer-social {
+	margin: 0;
+	padding: 0;
+	width: 400px;
+	box-sizing: border-box;
+	padding-left: 134px;
+	display: flex;
+}
+
+.footer-social li {
+	width: 47px;
+	height: 47px;
+	background-color: #81b3d2;
+	margin-right: 6px;
+}
+/* как заставить svg в коде встать по центру блока??? */
+
+}
+.footer-social li:last-child {
+	margin-right: 0px;
+}
+
+.copyright {
+	width: 400px;
+	box-sizing: border-box;
+	padding-left: 105px;
+}
+
+
 .filter-settings {
-	background-image: url("../img/filter-background_v2.jpg");
+	background-image: url("../img/filter-background_v2.jpg"); /*почему у фона появляется бордер и как от него избаваиться?? */
 	background-size: 1200px 217px;
 	background-repeat: no-repeat;
 	background-color: #5b6872;
@@ -228,6 +424,10 @@ li {
 	padding:0;
 }
 
+select {
+	display: flex;
+}
+
 .hotel-filter fieldset {
 	width: 1200px;
 	height: 217px;
@@ -235,6 +435,13 @@ li {
 	padding:0;
 	color: #ffffff;
 	font-family: inherit;
+	border: 0;
+}
+
+.hotel-filter-form {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
 }
 
 .hotel-filter label {
@@ -258,8 +465,13 @@ li {
 	color: #000000;
 }
 
-.hotel-filter {
-	background-color: #ffffff;
+
+
+.filter-results {
+	display: flex;
+	justify-content: space-around;
+	align-items: baseline;
+	min-height: 88px;
 }
 
 .filter-results h2,
@@ -291,6 +503,10 @@ li {
 	color: #9ac2db;
 	text-decoration: none;
 
+}
+
+.hotels-sort {
+	display: flex;
 }
 
 .sort-order-up {
@@ -328,14 +544,36 @@ li {
 	background-image: url(../img/icon-down-dir-active.svg);
 }
 
+.hotel-card {
+	margin-top: 10px;
+	width: 1200px;
+	margin: auto;
+	margin-top: 2px;
+	padding: 0;
+	background-color: #ffffff;
+	display: flex;
+	min-height: 148px;
+	align-items: center;
+}
+
+.hotel-card:last-child {
+	margin-bottom: 2px;
+}
+
+.hotel-card img {
+	margin-left: 73px;
+}
+
+
 a.hotel-description {
-	width:110px;
 	height: 27px;
 	color: #ffffff;
 	font-weight: bold;
-	display: block;
+	display: inline-block;
 	background-color: #81b3d2;
 	text-align: center;
+	padding: 3px 17px 3px;
+	margin-right: 4px;
 }
 
 a.hotel-description:hover {
@@ -348,13 +586,13 @@ a.hotel-description:active {
 }
 
 a.hotel-booking {
-	width:142px;
 	height: 27px;
 	color: #ffffff;
 	font-weight: bold;
-	display: block;
+	display: inline-block;
 	background-color: #766357;
 	text-align: center;
+	padding: 3px 17px 3px;
 }
 
 a.hotel-booking:hover {
