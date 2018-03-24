@@ -40,6 +40,7 @@ input[type="radio"].visually-hidden {
 }
 
 .container {
+	position: relative;
 	width: 1200px;
 	margin: auto;
 	padding: 0;
@@ -257,8 +258,7 @@ nav li:nth-child(3) {
 }
 
 .map {
-	height: 472px;
-	overflow: hidden;
+	height: 593px;
 }
 
 .modal-form-request {
@@ -386,6 +386,8 @@ nav li:nth-child(3) {
 	background-repeat: no-repeat;
 }
 
+/*как сделать эффект ховер и эктив для календарика??? */
+
 .modal input[type="text"] {
 	display: inline-block;
 	width: 38px;
@@ -441,6 +443,13 @@ button.minus {
 	background-color: #5496bd;
 }
 
+.first-page-footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+
+	background-color: rgba(255,255,255,0.9)
+}
 
 .main-footer,
 .main-footer > a{
@@ -838,8 +847,21 @@ button.minus {
 	align-items: flex-start;
 }
 
-.hotel-information h2 {
+a.hotel-title {
 	margin: 0 0 5px;
+
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: bold;
+	color: #000000;
+}
+
+a.hotel-title:hover {
+	color:  #81b3d2;
+}
+
+a.hotel-title:active {
+	color: #b2b2b2;
 }
 
 .hotel-information div:nth-child(2) {
