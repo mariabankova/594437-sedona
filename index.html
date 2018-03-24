@@ -5,6 +5,7 @@
     <title>HTML Academy: Седона</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
     <link  rel="stylesheet" href="css/style.css">
+    <link href="css/normalize.css" rel="stylesheet">
   </head>
   <body>
     <div class="container">
@@ -17,7 +18,7 @@
                 <li> <a href="info.html"> Информация </a> </li>
                 <li> <a href="media.html"> Фото и видео </a> </li>
                 <li> <a href="map.html"> Карта штата </a> </li>
-                <li> <a class="current" href="hotels.html"> Гостинницы </a> </li>
+                <li> <a class="current" href="hotels.html"> Гостиницы </a> </li>
             </ul>
         	</nav>
         </header>
@@ -30,29 +31,29 @@
         	</div>
         	<div class="main-features">
         	    <section class="features-realcity-bridge">
-        		    <div class="text"><h3> Настоящий городок </h3>
+        		    <div class="feature-description"><h3> Настоящий городок </h3>
         			<span> - №1 - </span>
         			<p>Седона - не аттракцион для туристов,<br> там течет своя жизнь </p>
                     </div>
-        			<img src="img/real-city.jpg" alt="Самое красивое место на свете" width="800">
+        			<img src="img/real-city.jpg" alt="Самое красивое место на свете" width="800px" height="256px">
         		</section>
-        		<div class="places-and-features">
-                    <section class="accomodation">	 
+        		<div class="places-and-features white">
+                    <section>	 
             			<h3>Жилье</h3>
             			<p>Рекомендуем пожить в настоящем мотеле, как в кино!</p>  
             		</section>	
-                    <section class="food">    
+                    <section>    
             			<h3>Еда</h3>
             			<p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p> 
             		</section>
-            		<section class="souvenirs">
+            		<section>
             			<h3>Сувениры</h3>
             			<p>Не только китайского, но и местного производства</p>
             		</section>
                 </div>
         		<section class="features-realcity-bridge">  
-        		    <img src="img/bridge.jpg" alt="Самый красивый мост на свете" width="800px">	
-        	    	<div class="text"><h3> Там есть <br> мост дьявола </h3>
+        		    <img src="img/bridge.jpg" alt="Самый красивый мост на свете" width="800px" height="256px">	
+        	    	<div class="feature-description"><h3> Там есть <br> мост дьявола </h3>
         		    <span> - №2 - </span>
         		    <p>Да, по нему можно пройти! Если, конечно, <br> вы осмелитесь </p></div>
       			</section>
@@ -79,6 +80,33 @@
             	<h2> Заинтересовались? </h2>
             	<p> Укажите предполагаемы даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в Седоне  </p>
             	<button class="modal-form-open"> Поиск гостиницы в Седоне </button>
+
+                 <section class="modal hotel-search">
+                    <fieldset>
+                        <form action="/echo" metod="post">
+                            <div><label for="check-in-date">Дата заезда:</label>
+                            <input type="date" id="check-in-date" name="check-in-date" required></div>
+
+                            <div><label for="check-out-date">Дата выезда:</label>
+                            <input type="date" id="check-out-date" name="check-out-date" required></div>
+
+                            <div><label for="adults">Взрослые: </label>
+                            <button class="minus">-</button>
+                            <input type="text" id="adults" name="adults" pattern="[1-9]{1}" value="2" required>
+                            <button class="plus">+</button>
+                           
+                            <label for="kids" class="kids">Дети:</label>
+                            <button class="minus">-</button>
+                            <input type="text" id="kids" name="kids" pattern="[1-9]{1}" value="0">
+                            <button class="plus">+</button>
+                            </div>
+
+                            <input type="submit" value="Найти">
+                        </form> 
+                    </fieldset> 
+                </section>    
+
+
             </section>       
             <section class="map">
             	<h2 class="visually-hidden">Карта местности </h2>
@@ -95,31 +123,9 @@
             	<li> <a class="social-youtube" href="#"><span class="visually-hidden">YouTube</span>
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="16" viewBox="0 0 20 16"><path fill="#FFF" d="M17 0H3C1.35 0 0 1.35 0 3v10c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3zM6.027 11.998V4.002L15.014 8l-8.987 3.998z"/></svg></a></li>
             </ul>
-            <div class="copyright"> Web-site by <a class="htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="HTML Academy"> HTML Academy </a> </div>
+            <div class="copyright"> Web-site by <a class="htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="HTML Academy"> <span class="visually-hidden">HTML Academy</span><span class="logo-htmlacademy"></span> </a> </div>
         </footer>
-        <section class="modal hotel-search">
-            <fieldset>
-                <form action="/echo" metod="post">
-                	<label for="check-in-date">Дата заезда</label>
-                	<input type="date" id="check-in-date" name="check-in-date" required>
-
-                	<label for="check-out-date">Дата выезда</label>
-                	<input type="date" id="check-out-date" name="check-out-date" required>
-
-                	<label for="adults">Взрослые </label>
-                	<button class="count minus"> - </button>
-                	<input type="text" id="adults" name="adults" pattern="[1-9]{1}" required>
-                	<button class="count plus"> + </button>
-
-                	<label for="kids">Дети</label>
-                	<button class="count minus"> - </button>
-                	<input type="text" id="kids" name="kids" pattern="[1-9]{1}">
-                	<button class="count plus"> + </button>
-
-                	<input type="submit" value="Найти">
-                </form>	
-            </fieldset>	
-        </section>    
+       
     </div>    
 </body>
 
