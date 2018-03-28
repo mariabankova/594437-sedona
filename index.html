@@ -92,14 +92,23 @@
                             <input type="text" id="check-out-date" name="check-out-date" placeholder="4 июля 2017" required></div>
 
                             <div class="count"><div class="adults"><label for="adults">Взрослые: </label>
-                            <span class="minus"></span>
+                            <button><span class="minus">
+                                <svg width="15" height="15"><line x1="1" y1="7" x2="13" y2="7" stroke="#a9a9a9" stroke-width="3"/></svg>
+                            </span></button>
                             <input type="text" id="adults" name="adults" pattern="[1-9]{1}" value="2" class="count" required>
-                            <span class="plus"> </span></div>
+                            <button><span class="plus">
+                                <svg width="15" height="15"><line x1="1" y1="7" x2="13" y2="7" stroke="#a9a9a9" stroke-width="3" /><line x1="7" y1="1" x2="7" y2="13" stroke="#a9a9a9" stroke-width="3" /></svg> 
+                            </span></button>
+                            </div>
                                                        
                             <div class="kids"><label for="kids" class="kids">Дети:</label>
-                            <span class="minus"></span>
+                            <button><span class="minus">
+                                <svg width="15" height="15"><line x1="1" y1="7" x2="13" y2="7" stroke="#a9a9a9" stroke-width="3"/></svg>
+                            </span></button>
                             <input type="text" id="kids" name="kids" pattern="[1-9]{1}" value="0" class="count">
-                            <span class="plus"> </span>
+                            <button><span class="plus">
+                                <svg width="15" height="15"><line x1="1" y1="7" x2="13" y2="7" stroke="#a9a9a9" stroke-width="3" /><line x1="7" y1="1" x2="7" y2="13" stroke="#a9a9a9" stroke-width="3" /></svg> 
+                            </span></button>
                             </div></div>
 
                             <input type="submit" value="Найти">

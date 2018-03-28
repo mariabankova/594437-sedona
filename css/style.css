@@ -414,14 +414,20 @@ div.date::after:active {
 
 
 div.adults {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
 	width: 235px;
 }
 
 .adults label {
-	margin-right: 35px;
+	margin-right: 45px;
 }
 
 div.kids {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
 	width: 183px;
 }
 
@@ -431,40 +437,44 @@ div.kids {
 
 .count input[type="text"] {
 	display: inline-block;
-	width: 115px;
+	width: 38px;
 	height: 38px;
-	padding: 15px;
-	padding-left: 54px;
+	padding: 0px;
+	padding-left: 15px;
 	border: none;
 }
 
 .count  {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 }
 
-.count span {
-	position: relative;
+.count button {
+	width: 38px;
+	height: 38px;
+	padding: 0;
+	margin: 0;
+	border: none;
+	box-sizing: border-box;
 }
 
-.count span.minus::after {
-	content: "-";
-	position: absolute;
-	right: -23px;
-	top: -3px;
-	font-size: 31px;
-	color: #a9a9a9;
-	z-index: 1
+.count button:focus svg {
+	stroke: #000000;
 }
 
-.count span.plus::before {
-	content: "+";
-	position: absolute;
-	left: -25px;
-	top: -4px;
-	font-size: 28px;
-	color: #a9a9a9;
-	z-index: 1
+span.plus,
+span.minus  {
+	display: inline-block;
+	width: 38px;
+	height: 38px;
+	margin: 0;
+	padding: 10px;
+
+	background-color: #f2f2f2;
+	box-sizing: border-box;
+
+	text-align: center;
 }
 
 .modal input[type="submit"] {
