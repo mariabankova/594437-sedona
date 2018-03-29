@@ -1,10 +1,10 @@
-<!DOCTYP    E html>
+<!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-    <link  rel="stylesheet" href="css/style.css">
+    <link  rel="stylesheet" href="css/style-dist.css">
     <link href="css/normalize.css" rel="stylesheet">
   </head>
   <body>
@@ -13,7 +13,7 @@
         <header class="main-header">
         	<nav>
         	   <a class="main-navigation-logo" href="index.html"> 
-                <img src="img/logo.png" alt="City of Sedona">
+                <img src="img/logo.png" alt="City of Sedona" width="138" height="70">
             </a>
             <ul class="site-navigation">
                 <li> <a href="info.html"> Информация </a> </li>
@@ -36,7 +36,7 @@
         			<span> - №1 - </span>
         			<p>Седона - не аттракцион для туристов,<br> там течет своя жизнь </p>
                     </div>
-        			<img src="img/real-city.jpg" alt="Самое красивое место на свете" width="800px" height="256px">
+        			<img src="img/real-city.jpg" alt="Самое красивое место на свете" width="800" height="256">
         		</section>
         		<div class="places-and-features white">
                     <section>	 
@@ -53,7 +53,7 @@
             		</section>
                 </div>
         		<section class="features-realcity-bridge">  
-        		    <img src="img/bridge.jpg" alt="Самый красивый мост на свете" width="800px" height="256px">	
+        		    <img src="img/bridge.jpg" alt="Самый красивый мост на свете" width="800" height="256">	
         	    	<div class="feature-description"><h3> Там есть <br> мост дьявола </h3>
         		    <span> - №2 - </span>
         		    <p>Да, по нему можно пройти! Если, конечно, <br> вы осмелитесь </p></div>
@@ -82,45 +82,51 @@
             	<p> Укажите предполагаемы даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в Седоне  </p>
             	<button class="modal-form-open"> Поиск гостиницы в Седоне </button>
 
-                 <section class="modal hotel-search">
-                    <fieldset>
-                        <form action="/echo" metod="post">
+                 <div class="modal hotel-search">
+                    <form action="/echo" method="post">
+                        <fieldset>
                             <div class="date"><label for="check-in-date">Дата заезда:</label>
                             <input type="text" id="check-in-date" name="check-in-date" placeholder="24 апреля 2017" required></div>
-
+                        </fieldset>
+                        
+                        <fieldset>
                             <div class="date"><label for="check-out-date">Дата выезда:</label>
                             <input type="text" id="check-out-date" name="check-out-date" placeholder="4 июля 2017" required></div>
+                        </fieldset>
 
+                        <fieldset>
                             <div class="count"><div class="adults"><label for="adults">Взрослые: </label>
-                            <button><span class="minus">
+                            <button class="minus">
                                 <svg width="15" height="15"><line x1="1" y1="7" x2="13" y2="7" stroke="#a9a9a9" stroke-width="3"/></svg>
-                            </span></button>
+                            </button>
                             <input type="text" id="adults" name="adults" pattern="[1-9]{1}" value="2" class="count" required>
-                            <button><span class="plus">
+                            <button class="plus">
                                 <svg width="15" height="15"><line x1="1" y1="7" x2="13" y2="7" stroke="#a9a9a9" stroke-width="3" /><line x1="7" y1="1" x2="7" y2="13" stroke="#a9a9a9" stroke-width="3" /></svg> 
                             </span></button>
                             </div>
                                                        
                             <div class="kids"><label for="kids" class="kids">Дети:</label>
-                            <button><span class="minus">
+                            <button class="minus">
                                 <svg width="15" height="15"><line x1="1" y1="7" x2="13" y2="7" stroke="#a9a9a9" stroke-width="3"/></svg>
-                            </span></button>
+                            </button>
                             <input type="text" id="kids" name="kids" pattern="[1-9]{1}" value="0" class="count">
-                            <button><span class="plus">
+                            <button class="plus">
                                 <svg width="15" height="15"><line x1="1" y1="7" x2="13" y2="7" stroke="#a9a9a9" stroke-width="3" /><line x1="7" y1="1" x2="7" y2="13" stroke="#a9a9a9" stroke-width="3" /></svg> 
-                            </span></button>
+                            </button>
                             </div></div>
+                        </fieldset>    
 
-                            <input type="submit" value="Найти">
+                            <button type="submit">Найти</button>
+
                         </form> 
                     </fieldset> 
-                </section>    
+                </div>    
 
 
             </section>       
             <section class="map">
             	<h2 class="visually-hidden">Карта местности </h2>
-                <img src="img/map.jpg" alt="Sedona map" width="1200px" height="593px">
+                <img src="img/map.jpg" alt="Sedona map" width="1200" height="593">
             </section>
         </main>    
         <footer class="main-footer first-page-footer">
