@@ -151,16 +151,11 @@ nav li:nth-child(3) {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
+	background-color: #ffffff;
 	background-image: url("../img/shape-for-background.png"), url("../img/index-background.jpg");
 	background-position: top 451px center, left -55px;
 	background-repeat: no-repeat, no-repeat;
 	background-size: auto, 1200px 778px;
-}
-
-.banner-content {
-	padding-bottom: ;
-
-	
 }
 
 .banner h1 {
@@ -639,7 +634,7 @@ div.count {
 }
 
 .footer-social {
-	width: 400px;
+	width: 395px;
 	margin: 0;
 	padding: 0;
 	padding-left: 120px;
@@ -691,7 +686,7 @@ div.count {
 
 .copyright {
 	width: 400px;
-	padding-left: 105px;
+	padding-left: 103px;
 
 	display: -webkit-box;
 
@@ -710,8 +705,8 @@ div.count {
 
 
 .htmlacademy {
-	width: 120px;
-	height: 40px;
+	width: 117px;
+	height: 38px;
 	margin-left: 5px;
 	margin-top: -5px;
 
@@ -837,7 +832,7 @@ div.count {
 .price-controls {
     position: relative;
 
-    height: 36px;
+    height: 34px;
     margin-bottom: 20px;
 
     border: 2px solid #ffffff;
@@ -848,7 +843,7 @@ div.count {
     display: inline-block;
 
     font-size: 14px;
-    line-height: 38px;
+    line-height: 34px;
     vertical-align: top;
 
     cursor: pointer;
@@ -863,6 +858,7 @@ div.count {
 
 .price-controls input {
     width: 50px;
+
     padding-bottom: 10px; /*for ie11*/
     margin: 0;
 
