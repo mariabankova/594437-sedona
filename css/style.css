@@ -486,7 +486,6 @@ div.date:focus::after {
 	opacity: 1;
 } 
 
-/*для ie11*/
 .date label {
 	display: inline-block;
 	box-sizing: border-box;
@@ -552,6 +551,7 @@ div.kids {
 div.count {
 	margin-bottom: 25px;
 }
+
 .count button {
 	width: 38px;
 	height: 38px;
@@ -564,7 +564,6 @@ div.count {
 	box-sizing: border-box;
 }
 
-
 .plus:focus line,
 .plus:hover line,
 .minus:focus line,
@@ -576,8 +575,6 @@ div.count {
 .minus:active line {
 	stroke: #81b3d2;
 } 
-/*как тут сделать ховер и эктив */
-
 
 .modal button[type="submit"] {
 	width: 458px;
@@ -683,7 +680,6 @@ div.count {
 	margin-right: 0px;
 }
 
-
 .copyright {
 	width: 400px;
 	padding-left: 103px;
@@ -703,7 +699,6 @@ div.count {
 	font-size: 14px;
 }
 
-
 .htmlacademy {
 	width: 117px;
 	height: 38px;
@@ -713,7 +708,6 @@ div.count {
 	display: inline-block;
 }
 
-/*для ie11*/
 .htmlacademy svg {
 	pointer-events: none;
 }
@@ -795,8 +789,6 @@ div.count {
   
     background-image: url("../img/checkbox-off.svg");
     background-repeat: no-repeat;
-    
-
 }
 
 .filter-checkboxes input[type="checkbox"]:disabled + .checkbox-indicator {
@@ -859,7 +851,7 @@ div.count {
 .price-controls input {
     width: 50px;
 
-    padding-bottom: 10px; /*for ie11*/
+    padding-bottom: 10px;
     margin: 0;
 
     color: inherit;
@@ -990,7 +982,6 @@ div.count {
 .filter-results a {
 	color: #c7c7c7;
 	border-bottom: 1px #c7c7c7 dashed;
-	/*text-decoration: underline dotted;*/ /*подчеркивание менее отдалено от текста, чем на макете. Оставить? */
 }
 
 .filter-results a:hover {
@@ -1206,7 +1197,7 @@ a.hotel-booking:active {
 .hotel-rank div {
 	height: 17px;
 	width: 110px;
-	margin-bottom: 44px; /*для ie11*/
+	margin-bottom: 44px;
 	text-align: right;
 }
 
