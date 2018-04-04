@@ -364,7 +364,6 @@ div.modal-form-request {
 }
 
 .modal-form-request h2 {
-	margin: p 0 25px;
 	font-size: 30px;
 	line-height: 36px;
 }
@@ -828,7 +827,7 @@ div.count {
     flex-direction: column;
 }
 
-.hotel-filter-form legend {
+.hotel-filter-form h3 {
 	margin-top: 0;
 	margin-bottom: 22px;
 	font-size: 16px;
@@ -875,7 +874,7 @@ div.count {
 	margin-left: auto;
 }
 
-legend.accomodation-type {
+h3.accomodation-type {
 	margin-top: 5px;
     margin-bottom: 10px;
     font-weight: 600;
