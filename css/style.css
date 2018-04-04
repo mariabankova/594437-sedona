@@ -159,19 +159,22 @@ nav li:nth-child(3) {
 }
 
 .banner h1 {
-	width: 500px;
+	width: 600px;
 	padding: 0;
 	margin: 3px 0 26px;
 	text-align: center;
 	font-size: 21px;
 	line-height: 26px;
+	text-align: center;
 	font-weight: bold;
 }
 
 .banner h2 {
+	width: 600px;
 	padding: 0;
 	margin: 0 0 55px;
 	font-size: 14px;
+	text-align: center;
 }
 
 
@@ -182,7 +185,7 @@ nav li:nth-child(3) {
 }
 
 .features-realcity-bridge h3 {
-	width: 160px;
+	width: 180px;
 	margin-top: 47px;
 }
 
@@ -225,6 +228,7 @@ nav li:nth-child(3) {
 .feature-description span {
 	display: block;
 }
+
 
 .places-and-features {
 	display: -webkit-box;
@@ -377,12 +381,16 @@ div.modal-form-request {
 }
 
 .modal-form-open {
+	display: inline-block;
+	vertical-align: baseline;
 	width: 568px;
 	height: 86px;
 	font-family: "PT Sans", Arial, sans-serif;
 	color: #ffffff;
 	font-weight: bold;
 	font-size: 21px;
+	line-height: 86px;
+	text-align: center;
 	text-transform: uppercase;
 	background-color: #766357;
 	border: none;
@@ -410,7 +418,7 @@ div.modal-form-request {
 	display: -ms-flexbox;
 	display: flex;
 	padding-left: 40px;	
-	padding-top: 55px;
+	padding-top: 53px;
 	padding-bottom: 0px;
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
@@ -646,7 +654,7 @@ div.count {
 	margin: 0;
 	padding: 0;
 	width: 1200px;
-	height: 120px;
+	height: 122px;
 	z-index: 2;
 	box-sizing: border-box;
 	background-color: rgba(255,255,255,0.9)
@@ -1072,8 +1080,8 @@ a.sort-order-up {
 a.sort-order-down {
 	width: 15px;
 	height: 15px;
-	margin-right: 72px;
-	margin-left: 6px;
+	margin-right: 69px;
+	margin-left: 7px;
 	background-image: url(../img/icon-down-dir.svg);
 	background-repeat: no-repeat;
 	background-size: 10px 10px;
@@ -1229,6 +1237,10 @@ a.hotel-booking:active {
 	justify-content: space-between;
 	-ms-flex-line-pack: end;
 	align-content: flex-end; 
+}
+
+.hotel-rank svg {
+	margin-left: 3px;
 }
 
 .hotel-rank span {
