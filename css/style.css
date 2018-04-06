@@ -225,11 +225,6 @@ input[type="radio"].visually-hidden {
   margin: auto;
   padding: 0;
   background-color: #ffffff;
-}
-
-.shadow {
-  width: 1200px;
-  margin: auto;
   -webkit-box-shadow: 0 0 10px 0px #c9c8c8;
   box-shadow: 0 0 10px 0px #c9c8c8;
 }
@@ -1298,10 +1293,12 @@ a.sort-order-down {
   -ms-flex-align: center;
   align-items: flex-start;
   background-color: #ffffff;
+  border-top: 1px solid #e5e5e5;
 }
 
 .hotel-card:last-child {
   margin-bottom: 2px;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .hotel-card img {
@@ -1346,7 +1343,7 @@ a.hotel-title:active {
 }
 
 .hotel-information div:nth-child(2) {
-  margin-bottom: 12px;
+  margin-bottom: 13px;
 }
 
 .hotel-type {
